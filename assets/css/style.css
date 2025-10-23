@@ -911,6 +911,53 @@ body {
     padding: 0 10px !important;
   }
 }
+
+/* CRITICAL: Override mobile center alignment for About section on desktop/tablet */
+@media (min-width: 768px) {
+  /* Remove mobile center alignment and restore original left alignment */
+  .vs-about-wrapper .about-content-wrapper {
+    text-align: left !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title h4,
+  .vs-about-wrapper .about-content-wrapper .section-title .sec-title1 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title h2,
+  .vs-about-wrapper .about-content-wrapper .section-title .sec-title2 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title p {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .list-style1 {
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .list-style1 ul {
+    text-align: left !important;
+    display: block !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .list-style1 ul li {
+    text-align: left !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .vs-btn {
+    margin: 0 !important;
+    display: inline-block !important;
+  }
+}
   
   /* Center align contact form title and subtitle, remove extra margins */
   .vs-contact-us-wrapper .semi-title-box h2,
@@ -15140,6 +15187,86 @@ h6.title-color2 a:hover {
 /* Button Font Family - Creata */
 .vs-btn {
     font-family: 'Creata', sans-serif !important;
+}
+
+/* FINAL OVERRIDE: Force left alignment for About section on desktop/tablet */
+@media (min-width: 768px) {
+  .vs-about-wrapper .about-content-wrapper {
+    text-align: left !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title h4,
+  .vs-about-wrapper .about-content-wrapper .section-title .sec-title1 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title h2,
+  .vs-about-wrapper .about-content-wrapper .section-title .sec-title2 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title p {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .list-style1 {
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .list-style1 ul {
+    text-align: left !important;
+    display: block !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .list-style1 ul li {
+    text-align: left !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .vs-btn {
+    margin: 0 !important;
+    display: inline-block !important;
+  }
+  
+  /* Override curved line image alignment */
+  .vs-about-wrapper .about-content-wrapper .section-title img {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  
+  /* Override button alignment in About section */
+  .vs-about-wrapper .about-content-wrapper .vs-btn {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    display: inline-block !important;
+  }
+  
+  /* Override row container alignment for button */
+  .vs-about-wrapper .about-content-wrapper .row {
+    justify-content: flex-start !important;
+  }
+  
+  /* Increase line height for bullet points and ensure left alignment */
+  .vs-about-wrapper .about-content-wrapper .list-style1 ul li {
+    line-height: 1.8 !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Ensure bullet list container is left-aligned */
+  .vs-about-wrapper .about-content-wrapper .list-style1 ul {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
