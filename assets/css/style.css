@@ -615,6 +615,383 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Remove scrollbar on mobile view only */
+@media (max-width: 767px) {
+  /* Hide scrollbar for webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  
+  /* Ensure scrolling still works */
+  body {
+    -ms-overflow-style: none; /* IE and Edge */
+    overflow-y: auto;
+  }
+  
+  /* Increase left margin for left-aligned elements on mobile */
+  .text-start, .text-left, [class*="text-start"], [class*="text-left"] {
+    margin-left: 20px !important;
+  }
+  
+  /* Increase left margin for elements with left alignment classes */
+  .float-start, .float-left, [class*="float-start"], [class*="float-left"] {
+    margin-left: 20px !important;
+  }
+  
+  /* Increase left margin for elements with justify-content-start */
+  .justify-content-start, [class*="justify-content-start"] {
+    margin-left: 20px !important;
+  }
+  
+  /* Increase left margin for elements with align-items-start */
+  .align-items-start, [class*="align-items-start"] {
+    margin-left: 20px !important;
+  }
+  
+  /* Increase left margin for elements with text-align: left */
+  [style*="text-align: left"], [style*="text-align:left"] {
+    margin-left: 20px !important;
+  }
+  
+  /* Increase left margin for elements with margin-left classes */
+  .ml-1, .ml-2, .ml-3, .ml-4, .ml-5, .ml-auto {
+    margin-left: calc(var(--bs-gutter-x) + 20px) !important;
+  }
+  
+  /* Increase left margin for elements with margin classes */
+  .m-1, .m-2, .m-3, .m-4, .m-5, .m-auto {
+    margin-left: calc(var(--bs-gutter-x) + 20px) !important;
+  }
+  
+  /* Increase left margin for elements with padding-left classes */
+  .pl-1, .pl-2, .pl-3, .pl-4, .pl-5 {
+    padding-left: calc(var(--bs-gutter-x) + 20px) !important;
+  }
+  
+  /* Increase left margin for elements with padding classes */
+  .p-1, .p-2, .p-3, .p-4, .p-5 {
+    padding-left: calc(var(--bs-gutter-x) + 20px) !important;
+  }
+  
+  /* Center align contact info elements on mobile - More specific rules */
+  .vs-contact-info-wrapper .info-box,
+  .vs-contact-info-wrapper .info-box * {
+    text-align: center !important;
+  }
+  
+  /* Force center alignment for address text */
+  .vs-contact-info-wrapper .info-box span.fs-16.d-block {
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+  
+  /* Force center alignment for email links */
+  .vs-contact-info-wrapper .info-list,
+  .vs-contact-info-wrapper .info-list * {
+    text-align: center !important;
+  }
+  
+  .vs-contact-info-wrapper .info-list a.fs-16.d-block {
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+  
+  /* Override any existing text alignment */
+  .vs-contact-info-wrapper .info-box h4,
+  .vs-contact-info-wrapper .info-box .h4 {
+    text-align: center !important;
+  }
+  
+  /* Ensure container alignment */
+  .vs-contact-info-wrapper .col-lg-5,
+  .vs-contact-info-wrapper .col-md-5 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .vs-contact-info-wrapper .info-bg {
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  /* Override any Bootstrap or other conflicting styles */
+  .vs-contact-info-wrapper .d-block {
+    text-align: center !important;
+  }
+  
+  .vs-contact-info-wrapper .text-body {
+    text-align: center !important;
+  }
+  
+  /* Ultra-specific overrides for stubborn elements */
+  .vs-contact-info-wrapper .info-box span.fs-16.d-block.mb-1,
+  .vs-contact-info-wrapper .info-list a.fs-16.d-block.mb-1,
+  .vs-contact-info-wrapper .info-list a.fs-16.d-block {
+    text-align: center !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Force center alignment with flexbox */
+  .vs-contact-info-wrapper .info-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 200px !important;
+  }
+  
+  .vs-contact-info-wrapper .info-list {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Stack contact info cards vertically on mobile */
+  .vs-contact-info-wrapper .row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+  
+  .vs-contact-info-wrapper .col-lg-5,
+  .vs-contact-info-wrapper .col-md-5 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+  }
+  
+  .vs-contact-info-wrapper .info-bg {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 200px !important;
+    width: 100% !important;
+    padding: 20px !important;
+    margin: 0 !important;
+  }
+  
+  /* Ensure both contact info cards have identical dimensions */
+  .vs-contact-info-wrapper .col-lg-5:first-child .info-bg,
+  .vs-contact-info-wrapper .col-lg-5:last-child .info-bg {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin: 0 !important;
+  }
+  
+  /* Ensure both info-boxes have identical styling */
+  .vs-contact-info-wrapper .info-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin: 0 !important;
+  }
+  
+  /* Center the icon and content vertically */
+  .vs-contact-info-wrapper .info-box .icon {
+    margin-bottom: 20px !important;
+  }
+  
+  .vs-contact-info-wrapper .info-box h4,
+  .vs-contact-info-wrapper .info-box .h4 {
+    margin-bottom: 15px !important;
+  }
+  
+  /* Increase margin below contact info section */
+  .vs-contact-info-wrapper {
+    margin-bottom: 60px !important;
+  }
+  
+  .vs-contact-info-wrapper .row {
+    margin-bottom: 40px !important;
+  }
+  
+  /* Increase left margin for contact form title and subtitle */
+  .vs-contact-us-wrapper .semi-title-box h2,
+  .vs-contact-us-wrapper .semi-title-box .sec-title2 {
+    margin-left: 20px !important;
+  }
+  
+  .vs-contact-us-wrapper .semi-title-box h6,
+  .vs-contact-us-wrapper .semi-title-box .text-body {
+    margin-left: 20px !important;
+  }
+  
+  /* Target the specific contact form wrapper */
+  .vs-contact-us-wrapper .contact-form-wrapper .semi-title-box {
+    margin-left: 20px !important;
+  }
+  
+  .vs-contact-us-wrapper .contact-form-wrapper .semi-title-box * {
+    margin-left: 20px !important;
+  }
+  
+  /* Center align About section content on mobile */
+  .vs-about-wrapper .about-content-wrapper {
+    text-align: center !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title {
+    text-align: center !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title h4,
+  .vs-about-wrapper .about-content-wrapper .section-title .sec-title1 {
+    text-align: center !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title h2,
+  .vs-about-wrapper .about-content-wrapper .section-title .sec-title2 {
+    text-align: center !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title p {
+    text-align: center !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .section-title h2,
+  .vs-about-wrapper .about-content-wrapper .section-title .sec-title2 {
+    text-align: center !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  
+  /* Apply same margin changes to all main titles and paragraphs on mobile */
+  .section-title h2,
+  .section-title .sec-title2,
+  .sec-title2 {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  
+  .section-title p,
+  .sec-paragraph {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  
+  /* Target specific sections */
+  .vs-services .section-title h2,
+  .vs-services .section-title .sec-title2,
+  .vs-team-wrapper .section-title h2,
+  .vs-team-wrapper .section-title .sec-title2,
+  .vs-contact-us-wrapper .section-title h2,
+  .vs-contact-us-wrapper .section-title .sec-title2 {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  
+  .vs-services .section-title p,
+  .vs-team-wrapper .section-title p,
+  .vs-contact-us-wrapper .section-title p {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  
+  /* Target hero section titles */
+  .vs-hero-wrapper .hero-title-one,
+  .vs-hero-wrapper .hero2-sub-title {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  
+  /* Center the contact form and submit button on mobile */
+  .vs-contact-us-wrapper .contact-form-wrapper {
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+  
+  .vs-contact-us-wrapper .contact-form-wrapper .contact-form {
+    text-align: center !important;
+  }
+  
+  .vs-contact-us-wrapper .contact-form-wrapper .contact-form .row {
+    justify-content: center !important;
+  }
+  
+  .vs-contact-us-wrapper .contact-form-wrapper .contact-form .col-12 {
+    text-align: center !important;
+  }
+  
+  .vs-contact-us-wrapper .contact-form-wrapper .vs-btn {
+    margin: 0 auto 60px auto !important;
+    display: block !important;
+  }
+  
+  .vs-contact-us-wrapper .contact-form-wrapper .contact-form .form-control {
+    text-align: center !important;
+  }
+  
+  .vs-contact-us-wrapper .contact-form-wrapper .contact-form textarea.form-control {
+    text-align: center !important;
+  }
+  
+  /* Center contact form labels with larger margins for page center */
+  .vs-contact-us-wrapper .contact-form-wrapper .contact-form label {
+    text-align: center !important;
+    display: block !important;
+    margin: 0 40px !important;
+  }
+  
+  .vs-contact-us-wrapper .contact-form-wrapper .contact-form .input-box {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+  
+  .vs-contact-us-wrapper .contact-form-wrapper .contact-form .form-control {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .list-style1 {
+    margin-left: 20px !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .list-style1 ul {
+    margin-left: 20px !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .list-style1 ul li {
+    margin-left: 20px !important;
+  }
+  
+  /* Center align the button */
+  .vs-about-wrapper .about-content-wrapper .vs-btn {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  .vs-about-wrapper .about-content-wrapper .row {
+    justify-content: center !important;
+  }
+}
+
 iframe {
   border: none;
   width: 100%;
@@ -4254,8 +4631,8 @@ i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
     margin-bottom: 30px;
   }
   .hero-layout2 .vs-hero2-bg {
-    padding-top: 64px;
-    padding-bottom: 37px;
+    padding-top: 220px;
+    padding-bottom: 180px;
   }
 }
 /* Medium devices */
