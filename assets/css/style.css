@@ -709,6 +709,12 @@ body {
   .vs-contact-info-wrapper .info-list a.fs-16.d-block:last-child {
     display: none !important;
   }
+}
+
+/* Hide newsletter subscription for all viewports */
+.footer-newsletter {
+  display: none !important;
+}
   
   /* Override any existing text alignment */
   .vs-contact-info-wrapper .info-box h4,
@@ -962,7 +968,7 @@ body {
   }
   
   .vs-contact-us-wrapper .contact-form-wrapper .contact-form textarea.form-control {
-    text-align: center !important;
+    text-align: left !important;
   }
   
   /* Align contact form elements to the left side */
