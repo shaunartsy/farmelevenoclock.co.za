@@ -1,0 +1,96 @@
+//vs-video
+
+.vs-video {
+    position: relative;
+    text-align: center;
+
+    & .play-btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-color: $theme-color;
+        // background-color: rgba(255, 255, 255, 0.302);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        &:hover {
+            background-color: $title-color;
+        }
+
+        @include xs {
+            padding-left: 0;
+            padding-right: 0;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+
+//vs-video2
+.vs-video {
+    .style-2 {
+        background-color: $white-color !important;
+        top: 40%;
+        left: 50%;
+        transform: translateY(-32%, -50%);
+
+        @include lg {
+            top: 50%;
+            transform: translateY(-50%, -50%);
+        }
+
+        @include sm {
+            @include equal-size(50px);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            @include equal-size(150px);
+            top: -25px;
+            left: -25px;
+            z-index: 1;
+            @extend .ripple-animation;
+            border-radius: 50%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            @include equal-size(195px);
+            top: -46px;
+            left: -46px;
+            z-index: 1;
+            border-radius: 50%;
+            @extend .ripple-animation;
+        }
+
+        i {
+            color: $title-color2 !important;
+            line-height: 98px;
+            background-color: transparent;
+
+            @include sm {
+                font-size: 14px;
+                line-height: 50px;
+            }
+        }
+
+        &:hover {
+            background-color: $theme-color2 !important;
+
+            i {
+                color: $white-color !important;
+            }
+        }
+    }
+}

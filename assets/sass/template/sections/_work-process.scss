@@ -1,0 +1,171 @@
+//vs-how-we-work-wrapper
+.process-bg {
+    position: relative;
+    z-index: 2;
+
+    @include xl {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    @include ml {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    @include lg {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    @include md {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    @include sm {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    @include xs {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.process-box {
+    padding: 0 30px;
+
+    .process-icon {
+        @include equal-size-lineHeight(150px);
+        border: 2px solid transparent;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        position: relative;
+        background-color: $white-color;
+        transition: all ease 0.4s;
+
+        img {
+            filter: none;
+            transition: all ease 0.4s;
+        }
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     @include equal-size(100%);
+        //     @include border-radius(50%);
+        //     border: 2px solid $white-color;
+        //     left: 0;
+        //     top: 0;
+        //     z-index: 1;
+        // }
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     @include equal-size(100%);
+        //     @include border-radius(50%);
+        //     border: 2px solid transparent;
+        //     left: 0;
+        //     top: 0;
+        //     z-index: 1;
+        // }
+    }
+
+    .badge {
+        font-size: 16px;
+        @include equal-size(50px);
+        line-height: 38px;
+        background-color: $title-color;
+        color: $white-color;
+        border-radius: 50%;
+        z-index: 2;
+        transition: all ease 0.4s;
+    }
+
+    .process-content {
+        .semi-title {
+            color: $white-color;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        span {
+            color: $white-color;
+        }
+    }
+
+    &:hover {
+        .process-icon {
+            background-color: $title-color;
+
+            .badge { 
+                background-color: $white-color;
+                color: $theme-color;
+            }
+
+            img {
+                filter: brightness(0) invert(1);
+
+            }
+
+            // &::before {
+            //     border-top-color: $body-color; // Show borders
+            //     border-right-color: $body-color; // Show borders
+            //     border-bottom-color: $body-color; // Show borders
+            //     border-left-color: $body-color; // Show borders
+            //     transition: border-color 0.15s linear,
+            //         border-color 0.15s linear 0.10s,
+            //         border-color 0.15s linear 0.20s,
+            //         border-color 0.15s linear 0.30s;
+            // }
+
+            // &::after {
+            //     border-top: 2px solid $body-color; // Shows border
+            //     border-left-width: 2px; // Solid edges, invisible borders
+            //     border-right-width: 2px; // Solid edges, invisible borders
+            //     transform: rotate(270deg); // Rotate around circle
+            //     transition:
+            //         transform 0.4s linear 0s,
+            //         border-left-width 0s linear 0.35s; // Solid edge post-rotation
+            // }
+
+        }
+    }
+}
+
+//work-bg-shape --about-1
+.work-bg-shape {
+    position: relative;
+    z-index: 1;
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     background-color: $grey-color;
+    //     width: 100%;
+    //     height: 290px;
+    //     left: 0;
+    //     bottom: 0;
+    //     z-index: -1;
+    // }
+}
+
+
+// .process-bg2 {
+//     .feature-icon {
+//         @include xs {
+//             margin-bottom: 20px;
+//         }
+
+//         &::before {
+//             @include equal-size(72px);
+//         }
+
+//         i {
+//             font-size: 32px;
+//         }
+//     }
+// }

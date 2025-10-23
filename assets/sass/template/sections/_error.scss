@@ -1,0 +1,11 @@
+.error-main-title {
+    font-size: 387px;
+    line-height: 1;
+
+    @include ml {
+        font-size: 72px;
+    }
+    @include lg {
+        font-size: 56px;
+    }
+}

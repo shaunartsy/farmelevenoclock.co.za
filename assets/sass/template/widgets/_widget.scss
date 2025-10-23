@@ -1,0 +1,35 @@
+.sidebar-area .widget {
+    margin-bottom: 40px;
+    background-color: $white-color;
+
+    &.widget_search,
+    &.widget_popular_post,
+    &.widget_tag_cloud {
+        margin-bottom: 40px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .widget_title {
+        color: $title-color;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        position: relative;
+        font-size: 24px;
+        border-bottom: 1px solid $border-color;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 40px;
+            height: 2px;
+            background-color: $theme-color;
+        }
+    }
+}

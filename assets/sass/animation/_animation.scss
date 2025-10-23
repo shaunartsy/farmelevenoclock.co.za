@@ -1,0 +1,332 @@
+.slideinup.vs-animated {
+  --animation-name: slideinup;
+}
+
+.slideindown.vs-animated {
+  --animation-name: slideindown;
+}
+
+.slideindown,
+.slideinup {
+  opacity: 0;
+}
+
+.vs-animated {
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  opacity: 1;
+  animation-name: var(--animation-name);
+}
+
+
+.ripple-animation {
+  animation-duration: var(--ripple-ani-duration);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: ripple;
+}
+
+.ani-moving-x,
+.ani-moving-y,
+.ani-moving {
+  animation-duration: var(--moving-ani-duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.ani-moving {
+  animation-name: moving;
+}
+
+.ani-moving-x {
+  animation-name: moving-x;
+}
+
+.ani-moving-y {
+  animation-name: moving-y;
+}
+
+
+.mega-hover {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    transition: all 2s ease;
+    transform: scale(1); 
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 3;
+    transform: rotate(5deg);
+  }
+
+  &:before {
+    top: 0;
+    right: 51%;
+    bottom: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &:after {
+    top: 50%;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+
+  &:hover {
+    &:before {
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 900ms linear;
+    }
+
+    &:after {
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all 900ms linear;
+    }
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+
+.thumb_swap {
+  .img_swap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    // transform: scale(1.5);
+    transition: all 0.5s ease 0s;
+    background-color: $white-color;
+  }
+
+  &:hover {
+    .img_swap {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .flash-img,
+  .product-img {
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+
+
+@include md {
+  .ani-md-none {
+    animation: none;
+  }
+}
+
+
+
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.40;
+  }
+
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+
+@-webkit-keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.40;
+  }
+
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes moving {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  20% {
+    transform: translate(0px, -60px);
+  }
+
+  50% {
+    transform: translate(-60px, -60px);
+  }
+
+  70% {
+    transform: translate(-60px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+@keyframes moving-y {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0, -60px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes moving-x {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(-60px, 0);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+
+/* pulseBig */
+@keyframes pulseBig {
+  0% {
+    box-shadow: 0 0 0 0 #fff;
+  }
+
+  50% {
+    box-shadow: 0 0 0 30px rgba(1, 93, 199, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(1, 93, 199, 0);
+  }
+}
+
+
+//float-bob-y
+
+@keyframes float-bob-y {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+@-webkit-keyframes float-bob-y {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+//newsMove
+@keyframes newsMove {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-200%, 0, 0);
+  }
+}
+
+@-webkit-keyframes newsMove {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-200%, 0, 0);
+  }
+}
+
+
+
+
+@keyframes slideinup {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideindown {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// animation: spin 30s infinite linear;

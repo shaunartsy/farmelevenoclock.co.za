@@ -1,0 +1,353 @@
+// Primary Button
+.vs-btn {
+  display: inline-block;
+  border: none;
+  padding: 17px 42px;
+  border-radius: 9999px;
+  background-color: $white-color;
+  color: $theme-color;
+  font-family: $theme-font;
+  font-weight: 500;
+  transition: all ease-in-out 0.4s;
+  position: relative;
+  z-index: 2;
+  vertical-align: middle;
+  overflow: hidden;
+  font-size: 16px;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   background-color: $theme-color;
+  //   width: 100%;
+  //   height: 0px;
+  //   left: 0;
+  //   top: 0;
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   z-index: -1;
+  //   transition: all ease-in-out 0.4s;
+  // }
+
+  i {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    color: $white-color;
+    background-color: $title-color;
+
+    // &::before {
+    //   height: 100%;
+    //   opacity: 1;
+    //   visibility: visible;
+    // }
+  }
+
+  &.style-1 {
+    color: $white-color;
+    background-color: $theme-color;
+
+    & i {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background-color: $title-color;
+    }
+  }
+
+  &.style-2 {
+    &:hover {
+      color: $theme-color;
+      background-color: $theme-color;
+    }
+  }
+
+  &.style-3 {
+    background-color: $theme-color;
+    color: $white-color;
+    border-radius: 9999px;
+
+    i {
+      margin: 0 0 0 10px;
+    }
+
+    &:hover {
+      background-color: $title-color;
+      color: $white-color;
+    }
+  }
+
+  &.hover-white {
+    &:hover {
+      background-color: $white-color;
+      color: $theme-color;
+    }
+  }
+}
+
+.style-3a {
+  color: $white-color;
+  background-color: $theme-color2;
+  padding: 17px 38px;
+  line-height: 1;
+
+  &:hover {
+    background-color: $title-color2;
+  }
+}
+
+.vs-btn2 {
+  background-color: $theme-color2;
+  color: $white-color;
+  padding: 18px 37px;
+
+  &:hover {
+    background-color: $title-color2;
+  }
+}
+
+.blog-btn {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 12px 25px;
+}
+
+.hero-btn {
+  color: $theme-color2;
+  background-color: $white-color;
+
+  &:hover {
+    background-color: $theme-color2;
+  }
+}
+
+.vs-btn-hw {
+  &:hover {
+    background-color: $white-color;
+    color: $theme-color2;
+  }
+}
+
+// Icon Button
+.icon-btn {
+  display: inline-block;
+  color: $white-color;
+  background-color: $title-color;
+  text-align: center;
+  position: relative;
+  @include equal-size(60px);
+  line-height: 60px;
+  border: none;
+  font-size: 18px;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $theme-color;
+    color: $white-color
+  }
+}
+
+// Play Button
+.play-btn {
+  position: relative;
+  border-radius: 50%;
+  display: inline-block;
+  @include equal-size(100px);
+
+  >i {
+    color: $white-color;
+    position: relative;
+    z-index: 2;
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: inherit;
+    transition: all ease 0.4s;
+  }
+
+  &.style-1 {
+    &::before {
+      content: "";
+      position: absolute;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      @include equal-size(150px);
+      top: -25px;
+      left: -25px;
+      z-index: 1;
+      @extend .ripple-animation;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      @include equal-size(195px);
+      top: -46px;
+      left: -46px;
+      z-index: 1;
+      border-radius: 50%;
+      @extend .ripple-animation;
+    }
+
+    &:hover {
+      color: $white-color;
+      background-color: $theme-color;
+    }
+
+    @include xs {
+      @include equal-size(50px);
+
+      i {
+        font-size: 14px;
+        line-height: 50px;
+      }
+    }
+  }
+}
+
+// Link Button
+.link-btn {
+  font-weight: 700;
+  display: inline-block;
+  line-height: 0.8;
+  color: $theme-color;
+  
+  i {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    color: $title-color;
+  }
+}
+
+.view-btn {
+  font-size: 18px;
+  font-size: 700;
+  color: $body-color2;
+  text-transform: capitalize;
+
+  i {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    color: $theme-color;
+  }
+}
+
+// Scroll To Top
+.scrollToTop {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  z-index: 94;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.8s;
+
+  >i {
+    display: inline-block;
+    @include equal-size(60px);
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid transparent;
+    background-color: $title-color;
+    color: $white-color;
+    font-size: 22px;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    left: -7px;
+    top: -7px;
+    bottom: -7px;
+    right: -7px;
+    z-index: -1;
+    border-radius: 50%;
+    border: 2px dashed $title-color;
+    @include transition(0.3s);
+    animation: spin 30s infinite linear;
+
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &.show {
+    bottom: 40px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:focus,
+  &:hover {
+    i {
+      background-color: $theme-color;
+      border-color: $white-color;
+    }
+
+    &:before {
+      border-color: $theme-color;  
+    }
+  }
+
+  @include sm {
+    @include equal-size(30px);
+    line-height: 30px;
+    right: 40px;
+    bottom: 60px;
+
+    &.show {
+      bottom: 40px;
+    }
+  }
+}
+
+.style-2 {
+  background-color: transparent;
+
+  @include sm {
+    @include equal-size(40px);
+    line-height: 40px;
+    right: 15px;
+    bottom: 50px;
+
+    &.show {
+      bottom: 15px;
+    }
+  }
+
+  &::before {
+    border-color: $title-color2 !important;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  i {
+    background-color: $title-color2;
+  }
+
+  &:hover {
+    background-color: transparent;
+
+    i {
+      background-color: $theme-color2;
+    }
+
+    &::before {
+      border-color: $theme-color2 !important;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+//vs-counter-wrapper
+.vs-counter-bg {
+    position: relative;
+    z-index: 3;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: $grey-color;
+
+    @include xl {
+        padding-top: 60px;
+        padding-bottom: 10px;
+        background-color: $grey-color;
+    }
+}
+
+.vs-counter-box {
+    display: flex;
+    margin-bottom: 30px;
+
+    .media-icon {
+        font-size: 50px;
+        color: $title-color;
+        margin-right: 20px;
+    }
+
+    .sec-title3 {
+        margin-right: 20px;
+        font-size: 46px;
+        margin: -0.1em 0 7px 0;
+        line-height: 1;
+    }
+
+    h4 {
+        font-size: 18px;
+        color: $body-color;
+    }
+}
+
+
+@include lg {
+    .vs-counter-box {
+        display: block;
+        text-align: center;
+
+        .media-icon {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+}

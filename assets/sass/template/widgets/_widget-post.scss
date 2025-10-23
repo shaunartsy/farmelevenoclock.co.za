@@ -1,0 +1,63 @@
+//vs-widget-recent-post
+
+.vs-widget-recent-post {
+    .recent-post {
+        border-bottom: 1px solid $border-color;
+
+        i {
+            vertical-align: middle;
+            margin-right: 5px;
+            top: -1px;
+            position: relative;
+        }
+
+        &:last-child {
+            border: 0;
+        }
+
+        .text-body {
+            font-weight: 500;
+            
+            &:hover {
+                color: $theme-color !important;
+            }
+        }
+    }
+
+    .recent-post-title {
+        color: $title-color;
+        font-weight: 600;
+
+        a {
+            color: inherit;
+        }
+
+        &:hover {
+            color: $theme-color;
+        }
+
+        @include xs {
+            font-size: 15px;
+        }
+    }
+
+    .media-img {
+        overflow: hidden;
+        border-radius: 10px;
+        
+        img {
+            transition: all ease 0.4s;
+            transform: scale(1.001);
+        }
+    }
+
+    .recent-post {
+        &:hover {
+            .media-img {
+                img {
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+}

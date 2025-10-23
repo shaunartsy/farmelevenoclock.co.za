@@ -1,0 +1,92 @@
+.sticky-header-wrap {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.1);
+  transition: all ease 0.4s;
+  transform: translateY(-110%);
+  transform-origin: top;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+  }
+}
+
+
+.menu-sticky1 {
+  >ul {
+    >li {
+      margin: 0 17px;
+
+      >a {
+        padding: 27px 0;
+      }
+    }
+  }
+}
+
+
+.menu-sticky3 {
+  >ul {
+    >li {
+      margin: 0 17px;
+      &.menu-item-has-children > a:hover {
+        color: $theme-color2;
+      }
+      >a {
+        color: $title-color;
+        padding: 27px 0;
+        &:hover {
+          color: $theme-color2;
+        }
+      }
+    }
+  }
+   ul.sub-menu {
+    li {
+      a {
+        color: $title-color !important;
+        &:hover {
+          color: $theme-color2 !important;
+        }
+      }
+    }
+  }
+  .mega-menu>li>a {
+    color: $title-color !important;
+     ul li {
+       a {
+         color: $title-color !important;
+         &:hover {
+          color: $theme-color2 !important;
+        }
+       }
+     }
+  }
+}
+
+
+.sticky-header3 {
+  .main-menu a {
+    color: $title-color2;
+
+    &:hover {
+      color: $theme-color2;
+    }
+  }
+    .vs-menu-toggle {
+        background-color: $theme-color2;
+        &:hover {
+          background-color: $title-color2;
+        }
+    }
+}
+

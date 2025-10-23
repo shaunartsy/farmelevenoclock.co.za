@@ -1,0 +1,762 @@
+@use "sass:math";
+
+.team-wrap1 {
+    padding-bottom: 240px;
+}
+
+
+.team_style1 {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 30px 15px;
+
+    .team_img {
+        position: relative;
+        z-index: 2;
+        width: var(--img-size, 300px);
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            bottom: -15px;
+            left: -15px;
+            border: 30px solid $theme-color;
+            border-radius: 50%;
+            z-index: 1;
+            clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0% 100%);
+            transform: rotate(50deg);
+            pointer-events: none;
+            transition: all ease 0.4s;
+        }
+    }
+
+    .team_content {
+        flex: 1;
+        padding: 0 0 0 var(--img-gap, 30px);
+    }
+
+    .team_info {
+        position: relative;
+        flex: 1;
+        z-index: 1;
+        padding: 25px 30px 30px 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: calc((var(--img-size, 300px) + var(--img-gap, 30px)) / -2);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $white-color;
+            z-index: -1;
+            border-radius: 0 30px 30px 0;
+        }
+    }
+
+    .team_name {
+        font-size: 26px;
+        font-weight: 500;
+        margin: 0 0 5px 0;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+
+    .team_degi {
+        color: $theme-color;
+        font-weight: 400;
+        margin: 0 0 25px 0;
+    }
+
+    .team_mail {
+        display: block;
+        padding: 1px 20px 1px 1px;
+        font-weight: 300;
+        background-color: #F9F7E6;
+        color: $title-color;
+        border-radius: 9999px;
+        transition: all ease 0.4s;
+
+        i {
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            margin-right: 15px;
+            border-radius: 50%;
+            color: $title-color;
+            background-color: $white-color;
+        }
+
+        &:hover {
+            background-color: $theme-color;
+            color: $white-color;
+        }
+    }
+
+    .team_social {
+        padding: 20px 0 0 0;
+
+        a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: $white-color;
+            color: $title-color;
+            transition: all ease 0.4s;
+            margin: 0 3px 0 0;
+            border-radius: 50%;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background-color: $theme-color;
+                color: $white-color;
+            }
+        }
+    }
+
+
+    &:hover {
+        .team_img {
+            &:before {
+                transform: rotate(30deg);
+                border-color: $title-color;
+            }
+        }
+    }
+
+}
+
+
+//vs-team-wrapper
+.vs-member-box {
+    padding: 55px 0 35px 0;
+    margin-bottom: 30px;
+    border-radius: 100px;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    &.has-border {
+        border: 2px solid $border-color;
+    }
+
+    .member-content {
+        margin-top: 30px;
+    }
+
+    .member-img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        margin-bottom: 55px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s;
+
+        img {
+            width: 100%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            // border: 2px solid $theme-color;
+            background-color: rgba(#9F974F, 0.3);
+            border-radius: 50%;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            top: -15px;
+            z-index: -1;
+            transition: all 0.5s;
+            width: auto !important;
+            height: auto !important;
+        }
+    }
+
+    .member-links {
+        .links-list {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            transform: translate(0, -30%);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 5;
+            transition: all ease 0.4s;
+
+            li {
+                display: inline-block;
+            }
+        }
+
+        // span.icon ,
+        a {
+            font-size: 16px;
+            display: inline-block;
+            @include equal-size(50px);
+            line-height: 50px;
+            background-color: $theme-color;
+            color: $white-color;
+            border-radius: 50%;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $title-color;
+                background-color: $white-color !important;
+            }
+        }
+
+        // span.icon {
+        //     color: $white-color;
+        //     background-color: $theme-color;
+        //     transform: translateY(-18px);
+        //     position: absolute;
+        //     top: -25px;
+        //     left: 0;
+        //     right: 0;
+        //     margin: 0 auto;
+        //     box-shadow: 0px 0px 0px 10px rgba(#999966, .15);
+        //     z-index: 2;
+        // }
+    }
+
+
+    .member-name,
+    .degi {
+        transition: all ease 0.4s;
+    }
+
+    &:hover {
+        .links-list {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.slick-center .vs-member-box,
+.vs-member-box:hover {
+    background-color: $title-color;
+
+    &.has-border {
+        border-color: transparent;
+    }
+
+    .member-img {
+        &:before {
+            border-color: transparent;
+            background-color: $theme-color;
+        }
+    }
+
+    .degi,
+    .member-name a {
+        color: $white-color !important;
+    }
+
+    .member-name a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+//vs-team-style2 
+.vs-team-style2 {
+    .vs-member-box {
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        border-radius: 20px;
+        background: transparent;
+        border-color: transparent;
+        box-shadow: none;
+
+        &:before {
+            display: none;
+        }
+
+        &:hover {
+            background: transparent;
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        &:hover {
+            .media-links {
+                opacity: 1;
+                visibility: visible;
+                right: -201px;
+            }
+        }
+    }
+
+    .media-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $white-color;
+        transform: rotate(-90deg);
+        position: absolute;
+        right: -255px;
+        top: 196px;
+        width: 458px;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.3s);
+
+        &.px-4 {
+            @include lg {
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+            }
+
+            @include md {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+        }
+
+        @include lg {
+
+            h6 {
+                display: inline-block;
+            }
+        }
+
+        @include xs {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        a {
+            color: $title-color2;
+            background-color: var(--media-color, $light-color);
+            @include equal-size-lineHeight(40px);
+            margin: 0 3px;
+            transform: rotate(90deg);
+
+            @include ml {
+                transform: rotate(0deg);
+            }
+
+            @include md {
+                transform: rotate(0deg);
+            }
+
+            &:hover {
+                background-color: $theme-color2;
+            }
+        }
+
+        h6 {
+            a {
+                background-color: transparent;
+
+                &:hover {
+                    color: $theme-color2;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+}
+
+.team_fix1 {
+    
+    .vs-member-box {
+        background-color: $smoke-color;
+        padding-bottom: 30px;
+    }
+
+    .member-img2 {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $title-color;
+            opacity: 0;
+            visibility: hidden;
+            transition: all ease 0.4s;
+            
+        }
+    }
+
+    .member-links {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 50px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease 0.4s;
+    }
+
+    .vs-member-box:hover {
+        .member-links {
+            margin-top: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .member-img2 {
+            &::before {
+                opacity: 0.6;
+                visibility: visible;
+            }
+        }
+    }
+
+
+    .vs-member-box:hover,
+    .slick-center .vs-member-box {
+        background-color: $theme-color;
+    }
+
+    .slick-center .vs-member-box .media-links {
+        opacity: 1;
+        visibility: visible;
+        right: -201px;
+    }
+
+    .media-links {
+        background-color: $theme-color;
+    }
+
+    .text-title2 a {
+        color: $white-color;
+
+        &:hover {
+            color: $white-color !important;
+            text-decoration: underline;
+        }
+    }
+
+    .member-links {
+        a {
+            background-color: $white-color;
+            color: $theme-color;
+
+            &:hover {
+                background-color: $title-color !important;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.team-details-img {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.team_fix2 {
+    .vs-member-box:hover,
+    .slick-center .vs-member-box {
+        background-color: $theme-color;
+
+        .member-img {
+            &:before {
+                background-color: rgba(#fff, 0.3);
+            }
+        }
+    }
+}
+
+//about-tema-layout-1
+.about-team-layout-1 {
+    .vs-member-box {
+        background-color: $white-color;
+        border: none;
+
+        &:before {
+            display: none;
+        }
+
+        .member-links {
+            a {
+                background-color: $theme-color;
+            }
+        }
+
+        .member-img {
+            &:before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .member-content {
+        margin-top: 40px;
+    }
+
+    .vs-member-box .member-img:before,
+    .slick-center .vs-member-box .member-img:before {
+        transform: scale(1);
+    }
+}
+
+//media-links3
+.vs-team3 {
+    .media-links3 {
+        background-color: var(--media-color);
+        --media-color: #f3f0d9;
+
+        @include sm {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        a {
+            background-color: $white-color;
+
+            &:hover {
+                background-color: currentColor;
+
+                i {
+                    color: $white-color;
+                }
+            }
+        }
+
+        h6 {
+            &:hover {
+                i {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+
+//
+// Team Details page
+// 
+
+.team-socials {
+    display: flex;
+    align-items: center;
+
+    .title {
+        margin: 0;
+        line-height: 1;
+        margin-right: 20px;
+        font-size: 14px;
+    }
+
+    .vs-social-group {
+        padding: 0;
+
+        a {
+            margin-right: 5px;
+
+            &:hover {
+                background-color: $title-color;
+                color: $white-color;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+.team-info {
+    padding: 60px 70px 60px 50px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0px 0 40px 0px rgba(0, 0, 0, 0.04);
+
+    table {
+        margin-bottom: 15px;
+    }
+
+    span.degi.text-theme {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .desc.fs-md {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    @include lg {
+        padding: 30px;
+    }
+
+    @include xs {
+        padding: 30px 15px;
+    }
+}
+
+.team-info-table {
+    td {
+        border: none;
+        padding: 6px 0;
+        font-size: 14px;
+        padding-right: 10px;
+
+        &:first-child {
+            color: $title-color;
+            font-weight: 600;
+
+            i {
+                color: $theme-color;
+                display: inline-block;
+                width: 35px;
+            }
+        }
+
+        a {
+            &:hover {
+                color: $theme-color !important;
+            }
+        }
+    }
+}
+
+@include lg {
+    .vs-member-box {
+        .member-img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .team_fix1 {
+        overflow: hidden;
+    }
+}
+
+@include ml {
+    .team_style1 {
+        --img-gap: 20px;
+
+        .team_img {
+            --img-size: 200px;
+
+            &:before {
+                top: -7.5px;
+                right: -7.5px;
+                bottom: -7.5px;
+                left: -7.5px;
+                border: 15px solid var(--theme-color);
+            }
+        }
+
+        .team_info {
+            padding: 20px 25px 20px 0;
+        }
+
+        .team_mail {
+            padding: 1px 10px 1px 1px;
+            font-size: 12px;
+        }
+
+    }
+}
+
+
+
+@include md {
+    .team-wrap1 {
+        padding-bottom: 30px;
+    }
+    
+    .team_style1 {
+        display: block;
+        text-align: center;
+        margin: 0 0 30px 0;
+
+        .team_img {
+            margin: 0 auto 0 auto;
+        }
+
+        .team_info {
+            padding: 20px;
+            
+            &::before {
+                left: 0;
+                right: 0;
+                border-radius: 20px;
+            }
+        }
+
+        .team_mail {
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+        }
+
+        .team_degi {
+            margin: 0 0 15px 0;
+        }
+
+        .team_content {
+            padding: 0;
+        }
+    }
+}
+
+@include sm {
+    .team-socials {
+        display: block;
+        margin-top: 10px;
+
+        .title {
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
+    }
+
+    .team-info-table {
+        td {
+            font-size: 13px;
+            margin-right: 5px;
+        }
+
+        td:first-child i {
+            width: 25px;
+        }
+    }
+}

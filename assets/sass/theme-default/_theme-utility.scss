@@ -1,0 +1,172 @@
+.rounded-10 {
+  border-radius: 10px;
+}
+
+.link-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.mega-hover {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    transition: all 2s ease;
+    transform: scale(1);
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 3;
+    transform: rotate(5deg);
+  }
+
+  &:before {
+    top: -10%;
+    right: 51%;
+    bottom: -10%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &:after {
+    top: 50%;
+    right: -10%;
+    bottom: 50%;
+    left: -10%;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+
+  &:hover {
+    &:before {
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 900ms linear;
+    }
+
+    &:after {
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all 900ms linear;
+    }
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+
+
+@media (min-width: 1950px) {
+  .d-none-hd {
+    display: none;
+  }
+}
+
+
+@media (min-width: $xl) {
+  .d-hd-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-hd-block {
+    display: block !important;
+  }
+}
+
+
+.image-scale-hover {
+  overflow: hidden;
+
+  img {
+    transition: all ease 0.4s;
+    transform: scale(1.001);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+.link-inherit {
+  & a,
+  * a {
+    color: inherit;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+
+.list-style-none {
+  ol,
+  ul,
+  & {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+
+
+.form-messages {
+  display: none;
+
+  &.success {
+    color: $success-color;
+    display: block;
+  }
+  &.error {
+    color: $error-color;
+    display: block;
+  }
+}
+
+
+
+
+.badge {
+  position: absolute;
+  width: fit-content;
+  display: inline-block;
+  text-align: center;
+  background-color: $body-color;
+  color: $white-color;
+  padding: .35em .55em;
+  border-radius: 50%;
+}
+
+.vs-rating {
+  color: $light-color;
+
+  .active {
+    color: $theme-color;
+  }
+}
+
+.media-body {
+  flex: 1;
+}
+

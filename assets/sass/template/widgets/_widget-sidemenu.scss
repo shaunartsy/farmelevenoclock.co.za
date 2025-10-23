@@ -1,0 +1,190 @@
+//sidemenu-wrapper
+
+.sidemenu-wrapper {
+    position: fixed;
+    z-index: 99999;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+
+    .widget_title {
+        font-size: 24px;
+        color: $title-color;
+        position: relative;
+        padding: 0 0 10px 0;
+        margin: 37px 0 30px 0;
+        font-weight: 500;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: $theme-color;
+            display: inline-block;
+        }
+
+        &:after {
+            background-color: $title-color;
+            left: 45px;
+            width: 5px;
+        }
+    }
+
+    .sidemenu-content {
+        background-color: $white-color;
+        width: 380px;
+        height: 100%;
+        padding: 40px 30px;
+        overflow: scroll;
+        position: relative;
+        margin-left: auto;
+        right: -500px;
+        top: 0;
+        cursor: auto;
+        transition: right ease 1s;
+        z-index: 1;
+    }
+
+    .closeButton {
+        font-size: 24px;
+        background-color: $theme-color;
+        color: $white-color;
+        border: none;
+        @include equal-size(50px);
+        border-radius: 50%;
+        line-height: 46px;
+        display: inline-block;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+
+        &:hover {
+            background-color: $title-color;
+            color: $white-color;
+        }
+    }
+
+}
+
+.sidemenu-wrapper.show {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    -webkit-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+    .sidemenu-content {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .widget_about {
+        .about-text {
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+.widget-contact {
+    span {
+        color: $white-color;
+        font-size: 15px;
+        @include equal-size-lineHeight(40px);
+        background-color: $theme-color2;
+        text-align: center;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 15px;
+        transition: all ease 0.4s;
+    }
+
+    a {
+        color: $title-color2;
+        font-size: 18px;
+        font-weight: 500;
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+    p:hover {
+        span {
+            background-color: $title-color;
+            color: $white-color;
+        }
+    }
+}
+
+
+.widget {
+    .recent-post {
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        margin-bottom: 20px;
+
+        .post-img {
+            margin-right: 15px;
+            width: 100px;
+            height: 90px;
+            overflow: hidden;
+
+            img {
+                transform: scale(1.001);
+                height: 100%;
+                width: auto;
+                transition: all ease 0.4s;
+            }
+        }
+
+        &:hover {
+            .post-img {
+                img {
+                    transform: scale(1.15);
+                }
+            }
+        }
+
+        .post-content {
+            flex: 1;
+            
+            a {
+                color: $title-color2;
+                font-size: 16px;
+                display: block;
+                font-weight: 700;
+                margin-bottom: 10px;
+                
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+
+            span {
+                font-size: 12px;
+                display: block;
+                text-transform: uppercase;
+            }
+
+            i {
+                color: $theme-color2;
+                margin-right: 7px;
+                position: relative;
+                top: -1px;
+            }
+        }
+    }
+}

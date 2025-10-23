@@ -1,0 +1,64 @@
+//vs-breadcrumb-wrapper
+
+.vs-breadcrumb-wrapper {
+    position: relative;
+    z-index: 2;
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $theme-color;
+        opacity: 0.51;
+        left: 0px;
+        top: 0;
+        @include equal-size(100%);
+        z-index: 1;
+    }
+}
+.breadcumb-content {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcumb-title {
+    font-size: 60px;
+    @include md {
+        font-size: 48px;
+    }
+    @include sm {
+        font-size: 28px;
+    }
+}
+
+.breadcumb-menu {
+    padding-left: 0;
+    li {
+        font-size: 16px;
+        display: inline-block;
+        a {
+            color: $white-color;
+            padding: 12px 21px;
+            line-height: 1;
+            border-radius: 30px;
+            &:hover {
+                background-color: rgba(#000, .3);
+            }
+        }
+        i {
+            margin-right: 8px;
+        }
+        &.active {
+            background-color: $white-color;
+            padding: 12px 21px;
+            line-height: 1;
+            border-radius: 30px;
+        }
+    }
+} 
+
+//breadcumb-layuout-
+.breadcumb-layuout-2 {
+    &::before {
+        background-color: $title-color2;
+    }
+}
+

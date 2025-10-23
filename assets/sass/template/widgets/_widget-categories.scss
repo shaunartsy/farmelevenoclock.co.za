@@ -1,0 +1,91 @@
+.widget {
+    &.widget_categories {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                position: relative;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    font-size: 14px;
+                    color: $title-color;
+                    font-weight: 500;
+                    padding: 14px 25px;
+                    margin-bottom: 10px;
+                    display: block;
+                    position: relative;
+                    background-color: var(--secondary-color);
+                    transition: 0.3s;
+                    border-radius: 9999px;
+                    @include transition(.4s);
+
+                    &:before {
+                        content: '\f105';
+                        font-family: $icon-font;
+                        font-weight: 900;
+                        margin-right: 5px;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    top: 8px;
+                    right: 12px;
+                    color: var(--white-color);
+                    background-color: var(--theme-color);
+                    width: 35px;
+                    height: 35px;
+                    text-align: center;
+                    border-radius: 50%;
+                    line-height: 35px;
+                    font-size: 14px;
+                    @include transition(.4s);
+                }
+
+                &:hover {
+                    
+                    a {
+                        background-color: $theme-color;
+                        color: $white-color;
+                    }
+
+                    span {
+                        color: $theme-color;
+                        background-color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tagcloud {
+    a {
+        border: 1px solid rgb(#000, 0.1);
+        background-color: $white-color;
+        padding: 12px 22px;
+        border-radius: 30px;
+        display: inline-block;
+        line-height: 1;
+        margin: 0 3px 8px 0;
+        font-weight: 500;
+        color: $title-color;
+        // box-shadow: 0px 20px 42.75px 2.25px rgba(0, 0, 0, 0.06);
+
+        @include sm {
+            padding: 10px 15px;
+        }
+
+        &:hover {
+            color: $white-color;
+            border-color: transparent;
+            background-color: $theme-color;
+        }
+    }
+}

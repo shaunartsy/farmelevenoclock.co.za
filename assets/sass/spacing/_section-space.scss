@@ -1,0 +1,52 @@
+
+.space,
+.space-top {
+  padding-top: $space;
+}
+
+.space,
+.space-bottom {
+  padding-bottom: $space;
+}
+
+
+.space-negative,
+.space-negative-top {
+  padding-top: $space-negative;
+}
+
+.space-negative,
+.space-negative-bottom {
+  padding-bottom: $space-negative;
+}
+
+
+.space-y-2 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+
+@include md {
+  .space,
+  .space-top {
+    padding-top: $space-mobile;
+  }
+
+  .space,
+  .space-bottom {
+    padding-bottom: $space-mobile;
+  }
+
+  .space-negative,
+  .space-negative-top {
+    padding-top: $space-negative-mobile;
+  }
+
+  .space-negative,
+  .space-negative-bottom {
+    padding-bottom: $space-negative-mobile;
+  }
+}
+
+

@@ -1,0 +1,257 @@
+/*
+Template Name: Huntar
+Template URL: http://html.vecurosoft.com/huntar
+Description: Huntar - Hunting and Hunting Services HTML Template
+Author: Vecuro
+Author URI: https://themeforest.net/user/vecuro
+Version: 1.0.0
+*/
+/*=================================
+    CSS Index End
+==================================*/
+/*
+01. Variable
+02. Mixin
+03. Function
+04. Typography
+05. Bootstrap Overwrite
+    5.1. Container
+    5.2. Grid
+    5.3. Form
+06. Vendor Custom Style 
+    6.1. Slick Slider
+    6.2. VS Mobile Menu
+    6.3. Flaticon
+07. Theme Default
+    7.1. Preloader
+    7.2. Theme Buttons
+    7.3. Section Title
+    7.4. Theme Utility
+08. Template Style
+    8.1. Header
+    8.2. Footer
+    8.3. Breadcrumb
+    8.4. Hero
+    8.5. Feature
+    8.6. About
+    8.7. Video
+    8.8. Service
+    8.9. Banner
+    8.10. Team
+    8.11. Testimonial
+    8.12. Blog
+    8.13. Contact
+    8.14. Work-process
+    8.15. Counter
+    8.16. Gallery
+    8.17. Woocommerce
+    8.18. Widget-sidemenu
+    8.19. Price
+    8.20. Error
+    8.21. Widget-search
+    8.22. Widget-categories
+    8.23. Widget-post
+    8.24. Shopping Cart
+    8.25. Checkout
+    8.26. Wishlist
+09. Theme Global
+    9.1. Font
+    9.2. Background
+    9.3. Text Color
+    9.4. Border Radius
+    9.5. Overlay
+10. Theme Animation
+11. Extend
+12. Spacing
+*/
+
+
+/*=================================
+    CSS Index End
+==================================*/
+
+
+/*=================================
+    01. Variable
+==================================*/
+@import 'variable/variable';
+
+/*=================================
+    02. Mixin
+==================================*/
+@import 'mixin/mixin';
+
+/*=================================
+    03. Function
+==================================*/
+@import 'function/function';
+
+/*=================================
+    04. Typography
+==================================*/
+@import 'typography/typography';
+
+/*=================================
+    05. Bootstrap Overwrite
+==================================*/
+/*------------------- 5.1. Container -------------------*/
+@import 'reset/container';
+
+/*------------------- 5.2. Grid -------------------*/
+@import 'reset/grid';
+
+/*------------------- 5.3. Form -------------------*/
+@import 'reset/form';
+
+/*=================================
+    06. Vendor Custom Style
+==================================*/
+/*------------------- 6.1. Slick Slider -------------------*/
+@import 'vendor/slick-slider';
+
+/*------------------- 6.2. VS Mobile Menu -------------------*/
+@import 'vendor/vsmenu';
+
+/*------------------- 6.3. Flaticon -------------------*/
+@import 'vendor/flaticon';
+
+/*=================================
+    07. Theme Default
+==================================*/
+/*------------------- 7.1. Preloader -------------------*/
+@import 'theme-default/preloader';
+
+/*------------------- 7.2. Theme Buttons -------------------*/
+@import 'theme-default/theme-btn';
+
+/*------------------- 7.3. Section Title -------------------*/
+@import 'theme-default/section-title';
+
+/*------------------- 7.4. Theme Utility -------------------*/
+@import 'theme-default/theme-utility';
+
+/*=================================
+    08. Template Style
+==================================*/
+/*------------------- 8.1. Header  -------------------*/
+@import 'template/headers/header-default';
+@import 'template/headers/header-sticky';
+@import 'template/headers/header-v1';
+
+/*------------------- 8.2. Footer  -------------------*/
+@import 'template/footers/footer-v1';
+
+/*------------------- 8.3. Breadcumb  -------------------*/
+@import 'template/breadcumb/breadcumb-v1';
+
+/*------------------- 8.4. Hero  -------------------*/
+@import 'template/sections/hero-default';
+
+/*------------------- 8.5. Feature  -------------------*/
+@import 'template/sections/feature';
+
+/*------------------- 8.6. About  -------------------*/
+@import 'template/sections/about';
+
+/*------------------- 8.7. Video  -------------------*/
+@import 'template/sections/video';
+
+/*------------------- 8.8. Service  -------------------*/
+@import 'template/sections/service';
+
+/*------------------- 8.9. Banner  -------------------*/
+@import 'template/sections/banner';
+
+/*------------------- 8.10. Team  -------------------*/
+@import 'template/sections/team';
+
+/*------------------- 8.11. Testimonial  -------------------*/
+@import 'template/sections/testimonial';
+
+/*------------------- 8.12. Blog  -------------------*/
+@import 'template/sections/blog';
+
+/*------------------- 8.13. Contact  -------------------*/
+@import 'template/sections/contact';
+
+/*------------------- 8.14. Work-process  -------------------*/
+@import 'template/sections/work-process';
+
+/*------------------- 8.15. Counter  -------------------*/
+@import 'template/sections/counter';
+
+/*------------------- 8.16. Gallery  -------------------*/
+@import 'template/sections/gallery';
+
+/*------------------- 8.17. Woocommerce  -------------------*/
+@import 'template/sections/woocommerce';
+
+/*------------------- 8.18. Widget-sidemenu  -------------------*/
+@import 'template/widgets/widget-sidemenu';
+
+/*------------------- 8.19. Price  -------------------*/
+@import 'template/sections/price';
+
+/*------------------- 8.20. Error  -------------------*/
+@import 'template/sections/error';
+
+/*------------------- 8.21. Widget-search  -------------------*/
+@import 'template/widgets/widget';
+@import 'template/widgets/widget-search';
+
+/*------------------- 8.22. Widget-categories  -------------------*/
+@import 'template/widgets/widget-categories';
+
+/*------------------- 8.23. Widget-post  -------------------*/
+@import 'template/widgets/widget-post';
+
+/*------------------- 8.24. Shopping Cart  -------------------*/
+@import 'template/sections/cart';
+
+/*------------------- 8.25. Checkout  -------------------*/
+@import 'template/sections/checkout';
+
+/*------------------- 8.26. Wishlist  -------------------*/
+@import 'template/sections/wishlist';
+
+/*=================================
+    09. Theme Global
+==================================*/
+/*------------------- 9.1. Font -------------------*/
+@import 'theme-global/font';
+
+/*------------------- 9.2. Background -------------------*/
+@import 'theme-global/background';
+
+/*------------------- 9.3. Text Color -------------------*/
+@import 'theme-global/text-color';
+
+/*------------------- 9.4. Border Radius -------------------*/
+@import 'theme-global/border-radius';
+
+/*------------------- 9.5. Overlay -------------------*/
+@import 'theme-global/overlay';
+
+/*=================================
+    10. Theme Animation
+==================================*/
+@import 'animation/animation';
+
+/*=================================
+    10. Homes
+==================================*/
+@import 'pages/home-v6';
+@import 'pages/home-v7';
+
+
+
+/*=================================
+    11. Extend
+==================================*/
+//@import 'extend/extend';
+
+/*=================================
+    12. Spacing
+==================================*/
+@import 'spacing/section-space';
+@import 'spacing/spacing';

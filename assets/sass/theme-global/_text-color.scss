@@ -1,0 +1,79 @@
+@each $textColorsMap, $value in $textColorsMap {
+  .text-#{$textColorsMap} {
+    color: #{$value} !important;
+  }
+}
+
+.text-inherit {
+  color: inherit;
+}
+.text-theme {
+  color: $theme-color;
+}
+.title-color {
+  color: $title-color;
+  a, span {
+    color: inherit;
+  }
+  a:hover {
+    color: $theme-color;
+  }
+}
+
+.text-hover-white {
+  &:hover {
+    color: $white-color !important;
+  }
+}
+.underline {
+  transition: .3s ease all;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.text-theme2 {
+  a {
+    color: inherit;
+    &:hover {
+      color: $title-color2;
+    }
+  }
+}
+
+.hover-theme {
+  &:hover {
+    color: $theme-color !important;
+  }
+}
+.hover-theme2 {
+  &:hover {
+    color: $theme-color2 !important;
+  }
+}
+a.text-title:hover {
+  color: $theme-color !important;
+}
+a.text-title2:hover {
+  color: $theme-color2 !important;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.title-color {
+    a:hover {
+      color: $theme-color;
+    }
+  }
+  &.text-title {
+    a:hover {
+      color: $theme-color;
+    }
+  }
+  &.title-color2 {
+    a:hover {
+      color: $theme-color2;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+//vs-plan-wrapper
+.plan {
+    background-color: $white-color;
+    box-shadow: 0px 20px 60px 0px rgba(37, 69, 116, 0.02);
+    padding: 80px 0;
+    border-radius: 20px;
+    @include transition(.3s);
+    .pr__body {
+        li {
+            margin-bottom: 9px;
+        }
+    }
+    &:hover {
+        transform: translateY(-15px);
+    }
+}
+
+
+
+//plan2
+.plan2 {
+    ul {
+        li {
+            font-size: 20px;
+            font-weight: 500;
+            color: $title-color2;
+            border-bottom: 1px solid $border-color;
+            padding: 23px 0;
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+            
+            @include xs {
+                font-size: 16px;
+            }
+            span {
+                color: $theme-color2;
+            }
+        }
+    }
+}
+
+
+@include md {
+    .plan {
+        padding: 50px 0;
+
+        .text-theme2 {
+            font-size: 32px;
+        }
+    }
+    
+}
