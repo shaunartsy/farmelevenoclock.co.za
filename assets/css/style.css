@@ -705,6 +705,11 @@ body {
     width: 100% !important;
   }
   
+  /* Hide the second email address on mobile */
+  .vs-contact-info-wrapper .info-list a.fs-16.d-block:last-child {
+    display: none !important;
+  }
+  
   /* Override any existing text alignment */
   .vs-contact-info-wrapper .info-box h4,
   .vs-contact-info-wrapper .info-box .h4 {
@@ -829,24 +834,32 @@ body {
     margin-bottom: 40px !important;
   }
   
-  /* Increase left margin for contact form title and subtitle */
+  /* Center align contact form title and subtitle, remove extra margins */
   .vs-contact-us-wrapper .semi-title-box h2,
   .vs-contact-us-wrapper .semi-title-box .sec-title2 {
-    margin-left: 20px !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .vs-contact-us-wrapper .semi-title-box h6,
   .vs-contact-us-wrapper .semi-title-box .text-body {
-    margin-left: 20px !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   /* Target the specific contact form wrapper */
   .vs-contact-us-wrapper .contact-form-wrapper .semi-title-box {
-    margin-left: 20px !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .vs-contact-us-wrapper .contact-form-wrapper .semi-title-box * {
-    margin-left: 20px !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   /* Center align About section content on mobile */
@@ -952,21 +965,17 @@ body {
     text-align: center !important;
   }
   
-  /* Center contact form labels with larger margins for page center */
-  .vs-contact-us-wrapper .contact-form-wrapper .contact-form label {
-    text-align: center !important;
-    display: block !important;
-    margin: 0 40px !important;
-  }
-  
+  /* Align contact form elements to the left side */
   .vs-contact-us-wrapper .contact-form-wrapper .contact-form .input-box {
-    margin-left: 20px !important;
-    margin-right: 20px !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .vs-contact-us-wrapper .contact-form-wrapper .contact-form .form-control {
-    margin-left: 20px !important;
-    margin-right: 20px !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .vs-about-wrapper .about-content-wrapper .list-style1 {
