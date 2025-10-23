@@ -715,6 +715,39 @@ body {
 .footer-newsletter {
   display: none !important;
 }
+
+/* Maintain side-to-side layout for desktop and tablet views */
+@media (min-width: 768px) {
+  .vs-contact-info-wrapper .row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    gap: 20px !important;
+    justify-content: center !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .vs-contact-info-wrapper .col-lg-5,
+  .vs-contact-info-wrapper .col-md-5 {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    flex: 1 !important;
+    max-width: calc(50% - 10px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+  
+  .vs-contact-info-wrapper .info-bg {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
   
   /* Override any existing text alignment */
   .vs-contact-info-wrapper .info-box h4,
@@ -839,6 +872,45 @@ body {
   .vs-contact-info-wrapper .row {
     margin-bottom: 40px !important;
   }
+}
+
+/* Force side-by-side layout for larger screens with higher specificity */
+@media (min-width: 992px) {
+  .vs-contact-info-wrapper .row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    gap: 30px !important;
+    justify-content: center !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .vs-contact-info-wrapper .col-lg-5 {
+    flex: 1 !important;
+    max-width: calc(50% - 15px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* CRITICAL: Force side-by-side layout for desktop - must be at the end */
+@media (min-width: 768px) {
+  .vs-contact-info-wrapper .row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    gap: 20px !important;
+    justify-content: center !important;
+  }
+  
+  .vs-contact-info-wrapper .col-lg-5,
+  .vs-contact-info-wrapper .col-md-5 {
+    flex: 1 !important;
+    max-width: calc(50% - 10px) !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+  }
+}
   
   /* Center align contact form title and subtitle, remove extra margins */
   .vs-contact-us-wrapper .semi-title-box h2,
