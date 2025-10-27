@@ -210,22 +210,62 @@
             display: inline-block !important;
         }
 
-        /* Left-align "What We Offer" section with equal padding/margin */
-        .vs-user-wrapper .user-content,
-        .vs-user-wrapper .section-title {
-            padding-left: 0 !important;
-            margin-left: 0 !important;
+        /* Left-align "What We Offer" section on desktop, center on mobile */
+        @media (min-width: 768px) {
+            .vs-user-wrapper .user-content,
+            .vs-user-wrapper .section-title {
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+            }
+            .vs-user-wrapper .sec-title1,
+            .vs-user-wrapper .sec-title2,
+            .vs-user-wrapper .section-title img,
+            .vs-user-wrapper .section-title p {
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+            }
+            /* Button position only - maintain internal padding */
+            .vs-user-wrapper .section-title .vs-btn {
+                margin-left: 0 !important;
+            }
         }
-        .vs-user-wrapper .sec-title1,
-        .vs-user-wrapper .sec-title2,
-        .vs-user-wrapper .section-title img,
-        .vs-user-wrapper .section-title p {
-            margin-left: 0 !important;
-            padding-left: 0 !important;
-        }
-        /* Button position only - maintain internal padding */
-        .vs-user-wrapper .section-title .vs-btn {
-            margin-left: 0 !important;
+        
+        /* Center on mobile */
+        @media (max-width: 767px) {
+            .vs-user-wrapper .section-title {
+                text-align: center !important;
+            }
+            .vs-user-wrapper .sec-title1,
+            .vs-user-wrapper .sec-title2,
+            .vs-user-wrapper .section-title p {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .vs-user-wrapper .section-title img {
+                display: block;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .vs-user-wrapper .section-title .vs-btn {
+                display: inline-block;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            /* Center Wildlife Breeding carousel container on mobile */
+            .testimonial_fix1 .vs-carousel {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .testimonial_fix1 .testimonial-img-box {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                text-align: center !important;
+            }
+            .testimonial_fix1 .testimonial-img-box img {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
         }
     </style>
 
