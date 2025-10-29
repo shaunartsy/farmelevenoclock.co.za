@@ -6692,8 +6692,10 @@ i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
 }
 .slick-center .vs-member-box .degi,
 .slick-center .vs-member-box .member-name a,
+.slick-center .vs-member-box .member-name span,
 .vs-member-box:hover .degi,
-.vs-member-box:hover .member-name a {
+.vs-member-box:hover .member-name a,
+.vs-member-box:hover .member-name span {
   color: var(--white-color) !important;
 }
 .slick-center .vs-member-box .member-name a:hover,
@@ -15266,6 +15268,23 @@ h6.title-color2 a:hover {
     text-align: left !important;
     margin-left: 0 !important;
     padding-left: 0 !important;
+  }
+}
+
+/* Mobile view: Reduce left margin for wildlife and livestock showcase sections */
+@media (max-width: 767px) {
+  .testimonial_fix1 .container {
+    margin-left: calc(var(--bs-gutter-x, 0.75rem) - 20px) !important;
+    padding-left: calc(var(--bs-gutter-x, 0.75rem) - 20px) !important;
+  }
+  
+  /* Reduce logo size by 10% on mobile view for main nav and sticky bar */
+  .header-logo img,
+  .header-logo a img {
+    width: 144px !important; /* 160px - 10% = 144px */
+    height: 61.2px !important; /* 68px - 10% = 61.2px */
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
   }
 }
 
