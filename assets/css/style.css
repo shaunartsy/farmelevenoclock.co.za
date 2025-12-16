@@ -59,6 +59,25 @@ body {
     scroll-padding-top: 120px; /* Extra padding for fixed header */
 }
 
+/*=================================
+    Basic Copy Protection (Deterrent Only)
+==================================*/
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Allow text selection inside form fields */
+input,
+textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
 /* Improved scroll momentum and responsiveness */
 html, body {
     overscroll-behavior: smooth;

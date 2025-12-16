@@ -728,30 +728,26 @@ $(document).ready(function() {
 
 
   /*----------- 00. Right Click Disable ----------*/
-  // window.addEventListener('contextmenu', function (e) {
-  //   // do something here... 
-  //   e.preventDefault();
-  // }, false);
+  window.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  }, false);
 
 
-  /*----------- 00. Inspect Element Disable ----------*/
-  // document.onkeydown = function (e) {
-  //   if (event.keyCode == 123) {
-  //     return false;
-  //   }
-  //   if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-  //     return false;
-  //   }
-  //   if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-  //     return false;
-  //   }
-  //   if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-  //     return false;
-  //   }
-  //   if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-  //     return false;
-  //   }
-  // }
+  /*----------- 00. Inspect Element / Shortcut Disable (Basic Deterrent) ----------*/
+  document.addEventListener('keydown', function (e) {
+    // F12
+    if (e.keyCode === 123) {
+      e.preventDefault();
+    }
+    // Ctrl/Meta + common copy/view shortcuts
+    if ((e.ctrlKey || e.metaKey) && ['u', 's', 'c', 'p', 'x', 'a'].indexOf(e.key.toLowerCase()) !== -1) {
+      e.preventDefault();
+    }
+    // Ctrl+Shift+I / Ctrl+Shift+J
+    if (e.ctrlKey && e.shiftKey && (e.key.toLowerCase() === 'i' || e.key.toLowerCase() === 'j')) {
+      e.preventDefault();
+    }
+  });
 
 
   /*===========================================
