@@ -1187,7 +1187,9 @@
                             <h2 class="sec-title2 mb-2">Send Us a Message</h2>
                             <h6 class="text-body fw-light">Your email address will not be published*</h6>
                         </div>
-                        <form action="mail.php" method="POST" class="contact-form contact-form1" netlify>
+                        <!-- Netlify Forms handling -->
+                        <form name="contact" method="POST" data-netlify="true" class="contact-form contact-form1">
+                            <input type="hidden" name="form-name" value="contact">
                             <div class="row g-4">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="input-box">
@@ -1366,8 +1368,6 @@
     <script src="assets/js/wow.min.js"></script>
     <!-- Custom Carousel -->
     <script src="assets/js/vscustom-carousel.min.js"></script>
-    <!-- Form Js -->
-    <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
 

@@ -18,8 +18,7 @@
         }
 
         // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
-        $recipient = "vecuroproducts@gmail.com";
+        $recipient = "info@farmelevenoclock.co.za";
 
         // Set the email subject.
         $subject = "New contact from $subject";

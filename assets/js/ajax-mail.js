@@ -21,8 +21,8 @@
         // Make sure that the formMessages div has the 'success' class.
         formMessages.removeClass('error');
         formMessages.addClass('success');
-        // Set the message text.
-        formMessages.text(response);
+        // Set a clean success message (ignore raw server HTML/code)
+        formMessages.text('Thank you! Your message has been sent successfully.');
         // Clear the form.
         $(form + ' input:not([type="submit"]),'+ form+' textarea').val('');
       })
@@ -30,12 +30,8 @@
         // Make sure that the formMessages div has the 'error' class.
         formMessages.removeClass('success');
         formMessages.addClass('error');
-        // Set the message text.
-        if (data.responseText !== '') {
-          formMessages.text(data.responseText);
-        } else {
-          formMessages.text('Oops! An error occured and your message could not be sent.');
-        }
+        // Set a clean error message (do not show raw HTML/code)
+        formMessages.text('Oops! Something went wrong and your message could not be sent. Please try again later.');
       });
     };
   };
