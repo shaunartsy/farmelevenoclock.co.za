@@ -10337,7 +10337,7 @@ i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
   background-color: var(--white-color);
   width: 380px;
   height: 100%;
-  padding: 40px 30px;
+  padding: 40px 30px 40px 100px;
   overflow: scroll;
   position: relative;
   margin-left: auto;

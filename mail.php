@@ -18,7 +18,7 @@
         }
 
         // Set the recipient email address.
-        $recipient = "info@farmelevenoclock.co.za";
+        $recipient = "info@avdft.co.za";
 
         // Set the email subject.
         $subject = "New contact from $subject";
