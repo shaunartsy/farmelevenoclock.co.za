@@ -30,8 +30,12 @@
         // Make sure that the formMessages div has the 'error' class.
         formMessages.removeClass('success');
         formMessages.addClass('error');
-        // Set a clean error message (do not show raw HTML/code)
-        formMessages.text('Oops! Something went wrong and your message could not be sent. Please try again later.');
+        // Show actual server error message if available and not HTML, otherwise default
+        if (data.responseText !== '' && data.responseText.indexOf('<') === -1) {
+            formMessages.text(data.responseText);
+        } else {
+            formMessages.text('Oops! Something went wrong and your message could not be sent. Please try again later.');
+        }
       });
     };
   };
